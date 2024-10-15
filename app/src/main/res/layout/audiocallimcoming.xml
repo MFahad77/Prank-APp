@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/callerImage"
+        android:layout_width="118dp"
+        android:layout_height="119dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/santa"/>
+
+    <TextView
+        android:id="@+id/callerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/callerImage"
+        android:layout_marginTop="46dp"
+        android:text="John Doe"
+        android:maxLines="1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/callerName"
+        android:layout_marginTop="19dp"
+        android:maxLines="1"
+        android:text="Incoming Audio Call"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/answerButton"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="510dp"
+        android:layout_marginBottom="71dp"
+        android:src="@drawable/audioaccept" />
+
+    <ImageView
+        android:id="@+id/endCallButton"
+        android:layout_width="179dp"
+        android:layout_height="172dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="499dp"
+        android:layout_marginEnd="202dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/decline" />
+</RelativeLayout>

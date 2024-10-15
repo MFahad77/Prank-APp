@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="211dp"
+        android:layout_marginTop="78dp"
+        android:src="@drawable/title"
+        app:layout_constraintBottom_toTopOf="@+id/messagebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.584"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/messagebutton"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="293dp"
+        android:layout_marginEnd="2dp"
+        android:src="@drawable/messagebutton" />
+
+    <ImageView
+        android:id="@+id/callbutton"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="243dp"
+        android:src="@drawable/videocall" />
+
+    <ImageView
+        android:id="@+id/audiobutton"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="151dp"
+        android:src="@drawable/audiocall" />
+
+    <ImageView
+        android:id="@+id/settingbutton"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="56dp"
+        android:src="@drawable/setting" />
+
+    <FrameLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/settings_layout"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="321dp"
+            android:layout_gravity="center"
+            app:cardElevation="8dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Toolbar
+                    android:id="@+id/settingtoolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/extrabg"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Settings"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/settingclose"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:src="@drawable/close" />
+                </Toolbar>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/settingtoolbar"
+                    android:layout_marginTop="60dp">
+
+                    <LinearLayout
+                        android:id="@+id/row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingTop="16dp">
+
+                        <ImageView
+                            android:layout_width="53dp"
+                            android:layout_height="47dp"
+                            android:src="@drawable/vibration" />
+
+                        <TextView
+                            android:id="@+id/textvibration"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:text="Vibration"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <Switch
+                            android:id="@+id/vibration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/row1"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingTop="16dp">
+
+                        <ImageView
+                            android:layout_width="47dp"
+                            android:layout_height="43dp"
+                            android:src="@drawable/volume" />
+
+                        <TextView
+                            android:id="@+id/textsound"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:text="Sound"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <Switch
+                            android:id="@+id/sound"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/row3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/row2"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingTop="16dp">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="47dp"
+                            android:src="@drawable/thunder" />
+
+                        <TextView
+                            android:id="@+id/textflash"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:text="Flash"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <Switch
+                            android:id="@+id/flash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout></RelativeLayout>
